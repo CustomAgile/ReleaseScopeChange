@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Copyright (c) 2012 Rally Software Development Corp. All rights reserved -->
+<html>
+<head>
+  <title>Release Scope Change</title>
+  <meta name="Name" content="App: Release Scope Change" />
+  <meta name="Version" content="2012.11.19" />
+  <meta name="Vendor" content="Rally Software" />
+
+  <script type="text/javascript" src="/apps/1.29/sdk.js"></script>
+
+  <script type="text/javascript">
+    function onLoad() {
+      var appCustom = new ReleaseScopeChange();
+      appCustom.display(dojo.body());
+    }
+
+    rally.addOnLoad(onLoad);
+  </script>
+</head>
+
+<body>
+  <table>
+      <tr>
+          <td class="lbl">
+              <div id="dropdown"></div>
+          </td>
+          <td id="timeboxInfo" class="lbl"></td>
+      </tr>
+      <tr>
+          <td colspan="2">
+              <div id="wait"></div>
+              <div id="info_msg"></div>
+          </td>
+      </tr>
+  </table>
+  <div id="radios" class="lbl">
+      &nbsp;Show Work:
+      <label class="lbl">
+          <input class="radio-lbl" type="radio" name="filterRadioButton" id="all_work" value="All" checked="checked"/> All
+      </label>
+      <label class="lbl">
+          <input class="radio-lbl" type="radio" name="filterRadioButton" id="added_work" value="Added"/> Added
+      </label>
+      <label class="lbl">
+          <input class="radio-lbl" type="radio" name="filterRadioButton" id="removed_work" value="Removed"/> Removed
+      </label>
+      <hr width=1050 align="left" size=1 color="#dddddd">
+  </div>
+  <table width=1050>
+      <tr>
+          <td style='width:37%'></td>
+          <td>
+              <div id="aggregate_data" class="agg-table"></div>
+          </td>
+          <td style='width:37%'></td>
+      </tr>
+  </table>
+  <div id="table_div"></div>
+</body>
+</html>
